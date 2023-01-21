@@ -5,7 +5,7 @@
 An extension for Laravel's console command class
 
 This class uses validation for the options. You can define which and how the options are validated. For this
-the laravels validation Facade is used
+the Laravel's Validation Facade is used
 
 ## Installation
 
