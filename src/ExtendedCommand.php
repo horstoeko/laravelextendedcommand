@@ -1,10 +1,26 @@
 <?php
 
+/**
+ * This file is a part of horstoeko/laravelextendedcommand.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace horstoeko\laravelextendedcommand;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * Class representing the document basics
+ *
+ * @category Laravel Extended Command
+ * @package  Laravel Extended Command
+ * @author   D. Erling <horstoeko@erling.com.de>
+ * @license  https://opensource.org/licenses/MIT MIT
+ * @link     https://github.com/horstoeko/laravelextendedcommand
+ */
 class ExtendedCommand extends Command
 {
     /**
