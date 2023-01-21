@@ -70,7 +70,7 @@ class ExtendedCommand extends Command
         $validator = Validator::make($this->options() + $this->arguments(), $this->getOptionsToValidate());
 
         if ($validator->fails()) {
-            foreach($validator->errors()->all() as $error) {
+            foreach ($validator->errors()->all() as $error) {
                 $this->error($error);
             }
 
@@ -85,8 +85,8 @@ class ExtendedCommand extends Command
     /**
      * Get the validated option value
      *
-     * @param string $key
-     * @param mixed $default
+     * @param  string $key
+     * @param  mixed  $default
      * @return mixed
      */
     protected function validatedOption(string $key, $default = null)
