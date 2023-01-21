@@ -13,7 +13,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Validator;
 
 /**
- * Class representing the document basics
+ * Class representing an extended console command for laravel
  *
  * @category Laravel Extended Command
  * @package  Laravel Extended Command
