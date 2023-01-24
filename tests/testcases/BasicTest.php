@@ -5,7 +5,7 @@ namespace horstoeko\laravelextendedcommand\tests\testcases;
 use horstoeko\laravelextendedcommand\ExtendedCommand;
 use horstoeko\laravelextendedcommand\tests\TestCase;
 
-class OrderDocumentBaseTest extends TestCase
+class BasicTest extends TestCase
 {
     /**
      * @covers \horstoeko\laravelextendedcommand\ExtendedCommand
