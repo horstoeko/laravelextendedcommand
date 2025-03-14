@@ -51,9 +51,7 @@ class ExtendedCommand extends Command
             return 1;
         }
 
-        $executionResult = $this->executeCommand();
-
-        return $executionResult;
+        return $this->executeCommand();
     }
 
     /**
