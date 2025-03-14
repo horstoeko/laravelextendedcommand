@@ -2,41 +2,35 @@
 
 declare(strict_types=1);
 
-use Rector\Config\RectorConfig;
-use Rector\Set\ValueObject\SetList;
-use Rector\Php52\Rector\Property\VarToPublicPropertyRector;
 use Rector\CodingStyle\Rector\Assign\SplitDoubleAssignRector;
-use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
-use Rector\CodingStyle\Rector\FuncCall\ConsistentImplodeRector;
-use Rector\CodingStyle\Rector\Stmt\NewlineAfterStatementRector;
-use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
-use Rector\Transform\Rector\FuncCall\FuncCallToConstFetchRector;
-use Rector\Strict\Rector\If_\BooleanInIfConditionRuleFixerRector;
-use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
-use Rector\CodingStyle\Rector\Property\SplitGroupedPropertiesRector;
-use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
-use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
-use Rector\CodingStyle\Rector\FuncCall\CallUserFuncToMethodCallRector;
-use Rector\Strict\Rector\BooleanNot\BooleanInBooleanNotRuleFixerRector;
-use Rector\CodingStyle\Rector\FuncCall\CallUserFuncArrayToVariadicRector;
-use Rector\Instanceof_\Rector\Ternary\FlipNegatedTernaryInstanceofRector;
-use Rector\Strict\Rector\Ternary\BooleanInTernaryOperatorRuleFixerRector;
 use Rector\CodingStyle\Rector\Catch_\CatchExceptionNameMatchingTypeRector;
+use Rector\CodingStyle\Rector\Encapsed\EncapsedStringsToSprintfRector;
+use Rector\CodingStyle\Rector\FuncCall\CallUserFuncArrayToVariadicRector;
+use Rector\CodingStyle\Rector\FuncCall\CallUserFuncToMethodCallRector;
+use Rector\CodingStyle\Rector\FuncCall\ConsistentImplodeRector;
 use Rector\CodingStyle\Rector\FuncCall\CountArrayToEmptyArrayComparisonRector;
+use Rector\CodingStyle\Rector\Property\SplitGroupedPropertiesRector;
+use Rector\CodingStyle\Rector\Stmt\NewlineAfterStatementRector;
+use Rector\Config\RectorConfig;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
+use Rector\Instanceof_\Rector\Ternary\FlipNegatedTernaryInstanceofRector;
 use Rector\Naming\Rector\Assign\RenameVariableToMatchMethodCallReturnTypeRector;
 use Rector\Naming\Rector\Foreach_\RenameForeachValueVariableToMatchExprVariableRector;
 use Rector\Naming\Rector\Foreach_\RenameForeachValueVariableToMatchMethodCallReturnTypeRector;
+use Rector\Php52\Rector\Property\VarToPublicPropertyRector;
+use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
+use Rector\Set\ValueObject\SetList;
+use Rector\Strict\Rector\BooleanNot\BooleanInBooleanNotRuleFixerRector;
+use Rector\Strict\Rector\Empty_\DisallowedEmptyRuleFixerRector;
+use Rector\Strict\Rector\If_\BooleanInIfConditionRuleFixerRector;
+use Rector\Strict\Rector\Ternary\BooleanInTernaryOperatorRuleFixerRector;
+use Rector\Transform\Rector\FuncCall\FuncCallToConstFetchRector;
 
 return RectorConfig::configure()
     ->withPaths([
-        __DIR__ . '/../examples',
-        __DIR__ . '/../make',
         __DIR__ . '/../src',
         __DIR__ . '/../tests',
-    ])
-    ->withSkip([
-        __DIR__ . '/../src/entities',
-        __DIR__ . '/../src/codelistsenum',
     ])
     ->withSkip([
         RemoveUselessParamTagRector::class,
